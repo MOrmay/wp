@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Assignment 2</title>
+    <title>Home - Douglas Raymond Baker</title>
     
     <!-- Keep wireframe.css for debugging, add your css to style.css -->
     <link id='wireframecss' type="text/css" rel="stylesheet" href="../wireframe.css" disabled>
@@ -17,27 +17,38 @@
       <div>Put company logo and name here</div>
     </header>
 
-    <nav>
-      <ul>
-        <li><a>Home</a></li>
-        <li><a>About Douglas</a></li>
-        <li><a>Letters</a></li>
-        <li><a>Postcards</a></li>
-        <li><a>Events</a>
-          <ul>
-            <li><a>Gallipoli</a></li>
-            <li><a>The Big Push</a></li>
-            <li><a>Battle Of Poziers</a></li>
-          </ul>
-        </li>
-        <li><a>Places</a></li>
-        <li><a>Records</a>
-          <ul>
-            <li><a>Service Summary</a></li>
-            <li><a>Service Record</a></li>
-          </ul>
-        </li>
-      </ul>
+    <nav class="topNav" id="myTopNav">
+      
+        <a href="index.php">Home</a>
+        <a href="index.php">About Douglas</a>
+        <a href="index.php">Letters</a>
+        <a href="index.php">Postcards</a>
+        <div class="dropdown">
+          <button class="dropbtn">Events
+            <i class="fa fa-claret-down"></i>
+          </button>
+          <div class="dropdown-content">
+            <a href="index.php">Gallipoli</a>
+            <a href="index.php">The Big Push</a>
+            <a href="index.php">Battle Of Poziers</a>
+          </div>
+        </div>
+        <a href="index.php">Places</a>
+        <div class="dropdown">
+          <button class="dropbtn">Records
+            <i class="fa fa-claret-down"></i>
+          </button>
+          <div class="dropdown-content">
+            <a href="https://www.aif.adfa.edu.au/showPerson?pid=11163">Service Summary</a>
+            <a href="http://recordsearch.naa.gov.au/scripts/Imagine.asp?B=3009496">Service Record</a>
+           </div>
+        </div>
+        
+        <a href="javascript:void(0);" class="icon" onclick="menuExpand()">
+              <i class="fa fa-bars"></i>        
+            </a>
+        
+      
     </nav>
 
     <main>
