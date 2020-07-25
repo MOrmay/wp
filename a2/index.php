@@ -18,7 +18,26 @@
     </header>
 
     <nav>
-      <div>Put website navigation links here</div>
+      <ul>
+        <li><a>Home</a></li>
+        <li><a>About Douglas</a></li>
+        <li><a>Letters</a></li>
+        <li><a>Postcards</a></li>
+        <li><a>Events</a>
+          <ul>
+            <li><a>Gallipoli</a></li>
+            <li><a>The Big Push</a></li>
+            <li><a>Battle Of Poziers</a></li>
+          </ul>
+        </li>
+        <li><a>Places</a></li>
+        <li><a>Records</a>
+          <ul>
+            <li><a>Service Summary</a></li>
+            <li><a>Service Record</a></li>
+          </ul>
+        </li>
+      </ul>
     </nav>
 
     <main>
@@ -31,7 +50,7 @@
     <footer>
       <div>&copy;<script>
         document.write(new Date().getFullYear());
-      </script> Put your name(s), student number(s) and group name here. Last modified <?= date ("Y F d  H:i", filemtime($_SERVER['SCRIPT_FILENAME'])); ?>.</div>
+      </script> Mathew Ormay s3795048 Last modified <?= date ("Y F d  H:i", filemtime($_SERVER['SCRIPT_FILENAME'])); ?>.</div>
       <div>Disclaimer: This website is not a real website and is being developed as part of a School of Science Web Programming course at RMIT University in Melbourne, Australia.</div>
       <div><button id='toggleWireframeCSS' onclick='toggleWireframe()'>Toggle Wireframe CSS</button></div>
     </footer>
