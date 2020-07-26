@@ -14,17 +14,17 @@
 
   <body>
 
-    <header>
-      <div class="title">ANZAC Douglas Raymond Baker - Letters Home</div>
+    <header class="title">
+      <div>ANZAC Douglas Raymond Baker - Letters Home</div>
     </header>
 
     <!--I had some trouble implementing an active selection for the nav bar so I opted for a
         fixed title at the top of the page-->
     <nav class="topNav" id="myTopNav">
-      <a href="index.php">Home</a>
-      <a href="about_Douglas.html">About Douglas</a>
-      <a href="index.php">Letters</a>
-      <a href="index.php">Postcards</a>
+      <a class="active" href="">Home</a>
+      <a href="Abbreviations.html">Abbreviations</a>
+      <a href="letters.html">Letters</a>
+      <a href="postcards.html">Postcards</a>
 
       <!-- creating the drop down button and selectors-->
       <div class="dropdown">
@@ -32,12 +32,12 @@
           <i class="fa fa-claret-down"></i>
         </button>
         <div class="dropdown-content">
-          <a href="index.php">Gallipoli</a>
-          <a href="index.php">The Big Push</a>
-          <a href="index.php">Battle Of Poziers</a>
+          <a href="gallipoli.html">Gallipoli</a>
+          <a href="bigpush.html">The Big Push</a>
+          <a href="ponziersbattle.html">Battle Of Poziers</a>
         </div>
       </div>
-      <a href="index.php">Places</a>
+      <a href="places.html">Places</a>
       <div class="dropdown">
         <button class="dropbtn">Records &#9660
           <i class="fa fa-claret-down"></i>
@@ -53,38 +53,65 @@
     <main>
       <div class='bodytext'>
         <h2>Hello and Welcome!</h2>
+        <img style="float: right; background-color: #bbb4b4; padding-left: 40px; opacity: 100;" src=../../media/a2/DRBphoto.jpg alt='Douglas Raymond Baker'>
         <p>This year is the centenary of the birth of the ANZAC legend. As such, many people, particularly young people,
- are looking for ways to connect with people of that period and inparticular, those who created the ANZAC legend.<br>
+ are looking for ways to connect with people of that period and inparticular, those who created the ANZAC legend.</p><p>
 This site presents the letters of Douglas Raymond Baker, who came from Gympie, Queensland, Australia. He
  enlisted in August 1914 and during the years that followed, he wrote letters and post cards to his family at home.
  In them, he describes much of the goings-on of the life of an ANZAC, his feeling and opinions, and experiences
- while visiting his relatives in England during leave.<br> They start from the beginning of basic training in Brisbane
+ while visiting his relatives in England during leave.</p><p>They start from the beginning of basic training in Brisbane
   in August 1914 and end in May 1918.
-<br> They are offered here so that others may get an understanding of life as an ANZAC and get a sense of what life on 
+</p><p>They are offered here so that others may get an understanding of life as an ANZAC and get a sense of what life on 
 the battlefield was like.
-<br> From the menu on the left, read the Introduction to set the scene. Then, to start reading the letters, click on
+</p><p>From the menu on the left, read the Introduction to set the scene. Then, to start reading the letters, click on
  Letter and Post Cards in the menu on the left. All the letters are searchable using the  search bar at the top right of this page.
-<img style="float: right; background-color: #bbb4b4;" src=../../media/a2/DRBphoto.jpg alt='Douglas Raymond Baker'>
-<br> (Photograph courtesy of : John Oxley Library, State Library of Queensland [Image number: 702692-19141024-s0023-0027])
-        </p> 
+</p><p>(Photograph courtesy of : John Oxley Library, State Library of Queensland [Image number: 702692-19141024-s0023-0027])</p> 
       </div>
     </main>
 
     <footer>
-      <div>&copy;<script>
-        document.write(new Date().getFullYear());
-      </script> Mathew Ormay s3795048 Last modified <?= date ("Y F d  H:i", filemtime($_SERVER['SCRIPT_FILENAME'])); ?>.</div>
-      <div>Disclaimer: This website is not a real website and is being developed as part of a School of Science Web Programming course at RMIT University in Melbourne, Australia.</div>
-      <div><button id='toggleWireframeCSS' onclick='toggleWireframe()'>Toggle Wireframe CSS</button></div>
+      <table>
+        <tr>
+          <th>Contact us:</th>
+          <td><div>&copy;<script>
+            document.write(new Date().getFullYear());
+            </script> Mathew Ormay s3795048 Last modified <?= date ("Y F d  H:i", filemtime($_SERVER['SCRIPT_FILENAME'])); ?>.</div>
+          </td>
+        </tr>
+        <tr>
+          <td>Email: ibak6837@bigpond.net.au</td>
+          <td>Disclaimer: This website is not a real website and is being developed as part of a School of Science Web Programming course at RMIT University in Melbourne, Australia.</td>
+        </tr>
+        <tr>
+          <td></td><td><div><button id='toggleWireframeCSS' onclick='toggleWireframe()'>Toggle Wireframe CSS</button></div></td>
+        </tr>
+      </table>
     </footer>
 
     <script>
+      window.onscroll = function() {stickyNav()}
+
+      var navbar = document.getElementById("myTopNav");
+
+      var sticky = navbar.offsetTop;
+      //menu expand function, tried getting both the collapsed menu and sticky to work together but can't get it to work
       function menuExpand() {
-        var x = document.getElementById("myTopNav");
-        if (x.className === "topNav") {
-          x.className += " responsive";
+        if (navbar.className === "topNav" && window.pageYOffset >= sticky) {
+          navbar.classList.add("responsive");
+          navbar.classList.add("sticky");
+        } else if (navbar.className === "topNav") {
+          navbar.classList.add("responsive");
         } else {
-          x.className = "topNav";
+          navbar.className = "topNav";
+        }
+      }
+
+      // Sticky navbar functionality 
+      function stickyNav(){
+        if (window.pageYOffset >= sticky) {
+          navbar.classList.add("sticky");
+        } else {
+          navbar.classList.remove("sticky");
         }
       }
     </script>

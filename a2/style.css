@@ -15,21 +15,23 @@ h2{
 /*styling for each pages title, not a huge fan of georgia down but they stand out more than bolded Arial*/
 .title{
     overflow: hidden;
-    background-color: #3581B8;
+    background-color: #ebe9e9;
     color: #0e0f19;
     width: 100%;
     font-weight: bold;
     font-family: 'Britannic Bold', 'Arial Rounded MT Bold', Georgia, 'Times New Roman', Times, serif;
     font-size: 36px;
+}
+/**/
+.title div{
     padding: 10px 16px;
 }
-
 /* below is based on the responsive navbar with dropdowns from w3Schools
 https://www.w3schools.com/howto/howto_js_responsive_navbar_dropdown.asp accessed 26/07/20*/
 .topNav {
     background-color: #253237;
     width: 100%;
-    overflow: hidden;
+    min-height: 48px;
     margin-top: auto;
 }
 .topNav a {
@@ -114,6 +116,15 @@ font-size: 17px;
         text-align: left;
       }
 }
+.sticky{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+.sticky + .content {
+    padding-top: 60px;
+}
 /*creating opaque background for text to be more legible*/
 main {
     margin-left: 10%;
@@ -128,7 +139,6 @@ main {
     padding-left: 40px;
     padding-right: 40px;
     padding-bottom: 20px;
-    opacity: 1;
 }
 
 @media screen and (max-width: 900px) {
@@ -136,10 +146,30 @@ main {
         margin-left: 25px;
         margin-right: 25px;
     }
+    .bodytext{
+        padding-left: 10px;
+        padding-right: 10px;
+    }
 }
 
 footer {
     float: bottom;
+    padding-top: 20px;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-bottom: 20px;
     background-color: #0e0f19;
     color: #f3f8f2;
+    box-shadow: 0 50vh 0 50vh #0e0f19;
+}
+footer table{
+    width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+footer table th{
+    text-align: left;
+}
+footer table td{
+    width: 50%;
 }
