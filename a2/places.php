@@ -4,40 +4,40 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>The Big Push</title>
+    <title>Places</title>
     
     <!-- Keep wireframe.css for debugging, add your css to style.css -->
     <link id='wireframecss' type="text/css" rel="stylesheet" href="../wireframe.css" disabled>
-    <link id='stylecss' type="text/css" rel="stylesheet" href="style.css?t=<?= filemtime("style.css"); ?>
+    <link id='stylecss' type="text/css" rel="stylesheet" href="style.css?t=<?= filemtime("style.css"); ?>">
     <script src='../wireframe.js'></script>
   </head>
 
   <body>
       
     <header class="title">
-        <div>The Big Push</div>
+        <div>Places</div>
     </header>
   
       <!--I had some trouble implementing an active selection for the nav bar so I opted for a
           fixed title at the top of the page-->
     <nav class="topNav" id="myTopNav">
       <a href="index.php">Home</a>
-      <a href="Abbreviations.html">Abbreviations</a>
-      <a href="letters.html">Letters</a>
-      <a href="postcards.html">Postcards</a>
+      <a href="Abbreviations.php">Abbreviations</a>
+      <a href="letters.php">Letters</a>
+      <a href="postcards.php">Postcards</a>
 
       <!-- creating the drop down button and selectors-->
-      <div class="dropdown active">
+      <div class="dropdown">
         <button class="dropbtn">Events &#9660
           <i class="fa fa-claret-down"></i>
         </button>
         <div class="dropdown-content">
-          <a href="gallipoli.html">Gallipoli</a>
-          <a class="active" href="">The Big Push</a>
-          <a href="ponziersbattle.html">Battle Of Poziers</a>
+          <a href="gallipoli.php">Gallipoli</a>
+          <a href="bigpush.php">The Big Push</a>
+          <a href="ponziersbattle.php">Battle Of Poziers</a>
         </div>
       </div>
-      <a href="places.html">Places</a>
+      <a class="active" href="">Places</a>
       <div class="dropdown">
         <button class="dropbtn">Records &#9660
           <i class="fa fa-claret-down"></i>

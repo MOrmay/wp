@@ -22,9 +22,9 @@
         fixed title at the top of the page-->
     <nav class="topNav" id="myTopNav">
       <a class="active" href="">Home</a>
-      <a href="Abbreviations.html">Abbreviations</a>
-      <a href="letters.html">Letters</a>
-      <a href="postcards.html">Postcards</a>
+      <a href="Abbreviations.php">Abbreviations</a>
+      <a href="letters.php">Letters</a>
+      <a href="postcards.php">Postcards</a>
 
       <!-- creating the drop down button and selectors-->
       <div class="dropdown">
@@ -32,12 +32,12 @@
           <i class="fa fa-claret-down"></i>
         </button>
         <div class="dropdown-content">
-          <a href="gallipoli.html">Gallipoli</a>
-          <a href="bigpush.html">The Big Push</a>
-          <a href="ponziersbattle.html">Battle Of Poziers</a>
+          <a href="gallipoli.php">Gallipoli</a>
+          <a href="bigpush.php">The Big Push</a>
+          <a href="ponziersbattle.php">Battle Of Poziers</a>
         </div>
       </div>
-      <a href="places.html">Places</a>
+      <a href="places.php">Places</a>
       <div class="dropdown">
         <button class="dropbtn">Records &#9660
           <i class="fa fa-claret-down"></i>
