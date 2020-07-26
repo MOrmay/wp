@@ -2,17 +2,26 @@ body {
     background-color: #bbb4b4;
     background-image: url(../../media/a2/SR_bkgrnd.jpg);
     background-size: cover;
-    font-family: Arial;
+    font-family: Arial, Arial, Helvetica, sans-serif;
+    margin: 0px;
 }
 
+h2{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: bold;
+    font-size: 32px;
+    color: #0e0f19;
+}
+/*styling for each pages title, not a huge fan of georgia down but they stand out more than bolded Arial*/
 .title{
     overflow: hidden;
     background-color: #3581B8;
     color: #0e0f19;
     width: 100%;
-    text-decoration: bold;
+    font-weight: bold;
+    font-family: 'Britannic Bold', 'Arial Rounded MT Bold', Georgia, 'Times New Roman', Times, serif;
     font-size: 36px;
-    padding-left: 14px;
+    padding: 10px 16px;
 }
 
 /* below is based on the responsive navbar with dropdowns from w3Schools
@@ -105,13 +114,32 @@ font-size: 17px;
         text-align: left;
       }
 }
-
+/*creating opaque background for text to be more legible*/
 main {
-    background-color: f3f8f2;
-    color: 0e0f19;
+    margin-left: 10%;
+    margin-right: 10%;
+    background-color: #f3f8f2;
+    opacity: 0.75;
+    color: #0e0f19;
+}
+/* creating default padding for text content*/
+.bodytext{
+    padding-top: 20px; /* needs atleast 1px for some reason to connect to menu and footer */
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: 20px;
+    opacity: 1;
+}
+
+@media screen and (max-width: 900px) {
+    main{
+        margin-left: 25px;
+        margin-right: 25px;
+    }
 }
 
 footer {
+    float: bottom;
     background-color: #0e0f19;
     color: #f3f8f2;
 }

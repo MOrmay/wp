@@ -15,7 +15,7 @@
   <body>
 
     <header>
-      <div class="title">ANZAC Douglas Raymond Baker - Letters Home<!DOCTYPE html></div>
+      <div class="title">ANZAC Douglas Raymond Baker - Letters Home</div>
     </header>
 
     <!--I had some trouble implementing an active selection for the nav bar so I opted for a
@@ -25,6 +25,8 @@
       <a href="about_Douglas.html">About Douglas</a>
       <a href="index.php">Letters</a>
       <a href="index.php">Postcards</a>
+
+      <!-- creating the drop down button and selectors-->
       <div class="dropdown">
         <button class="dropbtn">Events &#9660
           <i class="fa fa-claret-down"></i>
@@ -49,13 +51,23 @@
     </nav>
 
     <main>
-      <article id='Website Under Construction'>
-    <!-- Creative Commons image sourced from https://pixabay.com/en/maintenance-under-construction-2422173/ and used for educational purposes only -->
-        <img src='../../media/website-under-construction.png' alt='Website Under Construction' />
-      </article>
-      <p>
-        Just a bunch of <br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.
-       </p>
+      <div class='bodytext'>
+        <h2>Hello and Welcome!</h2>
+        <p>This year is the centenary of the birth of the ANZAC legend. As such, many people, particularly young people,
+ are looking for ways to connect with people of that period and inparticular, those who created the ANZAC legend.<br>
+This site presents the letters of Douglas Raymond Baker, who came from Gympie, Queensland, Australia. He
+ enlisted in August 1914 and during the years that followed, he wrote letters and post cards to his family at home.
+ In them, he describes much of the goings-on of the life of an ANZAC, his feeling and opinions, and experiences
+ while visiting his relatives in England during leave.<br> They start from the beginning of basic training in Brisbane
+  in August 1914 and end in May 1918.
+<br> They are offered here so that others may get an understanding of life as an ANZAC and get a sense of what life on 
+the battlefield was like.
+<br> From the menu on the left, read the Introduction to set the scene. Then, to start reading the letters, click on
+ Letter and Post Cards in the menu on the left. All the letters are searchable using the  search bar at the top right of this page.
+<img style="float: right; background-color: #bbb4b4;" src=../../media/a2/DRBphoto.jpg alt='Douglas Raymond Baker'>
+<br> (Photograph courtesy of : John Oxley Library, State Library of Queensland [Image number: 702692-19141024-s0023-0027])
+        </p> 
+      </div>
     </main>
 
     <footer>
