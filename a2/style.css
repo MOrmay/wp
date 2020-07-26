@@ -140,6 +140,24 @@ main {
     padding-right: 40px;
     padding-bottom: 20px;
 }
+.bodytext table{
+    width: 100%;
+    border: 1px solid #bbb4b4;
+}
+.bodytext table th{
+    text-align: left;
+    text-decoration: underline;
+    font-size: larger;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    border-bottom: 3px solid #bbb4b4;
+}
+.bodytext table td{
+    border-bottom: 1px solid #bbb4b4;
+    padding-left: 10px;
+}
+
 
 @media screen and (max-width: 900px) {
     main{

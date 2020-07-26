@@ -25,18 +25,6 @@
       <a href="Abbreviations.php">Abbreviations</a>
       <a href="letters.php">Letters</a>
       <a href="postcards.php">Postcards</a>
-
-      <!-- creating the drop down button and selectors-->
-      <div class="dropdown">
-        <button class="dropbtn">Events &#9660
-          <i class="fa fa-claret-down"></i>
-        </button>
-        <div class="dropdown-content">
-          <a href="gallipoli.php">Gallipoli</a>
-          <a href="bigpush.php">The Big Push</a>
-          <a href="ponziersbattle.php">Battle Of Poziers</a>
-        </div>
-      </div>
       <a href="places.php">Places</a>
       <div class="dropdown">
         <button class="dropbtn">Records &#9660
