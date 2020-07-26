@@ -39,8 +39,19 @@
     </nav>
 
     <main>
-      <div class='bodytext'>
-        <p>asdf</p>
+    <div class="bodytext">
+        <button class="accordian">Egypt</button>
+        <div class="panel">
+          <img src=../../media/a2/egypt_map.PNG>
+        </div>
+        <button class="accordian">Gallipoli</button>
+        <div class="panel">
+        <img src=../../media/a2/gallipoli.PNG>
+        </div>
+        <button class="accordian">Ypres</button>
+        <div class="panel">
+        <img src=../../media/a2/ypres.PNG>
+        </div>
       </div>
     </main>
 
@@ -88,6 +99,24 @@
         } else {
           navbar.classList.remove("sticky");
         }
+      }
+
+      //accordian script
+      var acc = document.getElementsByClassName("accordian");
+      var i;
+
+      for (i = 0; i < acc.length; i++) {
+        acc[i].addEventListener("click", function() {
+
+          this.classList.toggle("acc_active");
+
+          var panel = this.nextElementSibling;
+          if (panel.style.display === "block") {
+            panel.style.display = "none";
+          } else {
+            panel.style.display = "block";
+          }
+        });
       }
     </script>
 

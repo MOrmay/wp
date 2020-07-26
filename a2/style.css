@@ -158,6 +158,54 @@ main {
     padding-left: 10px;
 }
 
+.hand {
+    font-family: "bradley hand itc";
+    font-size: larger;
+    font-weight: bold;
+}
+
+.accordian {
+    background-color: #bbb4b4;
+    color: #0e0f19;
+    padding: 18px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+
+}
+
+/* adding an indicator for which tabs are open */
+.accordian:after {
+    content: '\02795'; /* Unicode "plus" + */
+    font-size: 13px;
+    color: #777;
+    float: right;
+    margin-left: 5px
+}
+
+.acc_active:after {
+    content: "\2796"; /* Unicode for "minus"(-) */
+  }
+
+.acc_active, .accordian:hover{
+    background-color: #253237;
+    color: #ebe9e9;
+}
+
+.panel {
+    padding: 0 18px;
+    background-color: #ebe9e9;
+    display: none;
+    overflow: hidden;
+}
+
+.panel img{
+    object-fit: cover;
+    width: 500px;
+    height: 500px;
+}
 
 @media screen and (max-width: 900px) {
     main{
