@@ -41,7 +41,7 @@
     <main>
       <div class='bodytext'>
         <h2>Hello and Welcome!</h2>
-        <img style="float: right; background-color: #bbb4b4; padding-left: 40px; opacity: 100;" src=../../media/a2/DRBphoto.jpg alt='Douglas Raymond Baker'>
+        <img style="float: right; padding-left: 40px; opacity: 100;" src=../../media/a2/DRBphoto.jpg alt='Douglas Raymond Baker'>
         <p>This year is the centenary of the birth of the ANZAC legend. As such, many people, particularly young people,
  are looking for ways to connect with people of that period and inparticular, those who created the ANZAC legend.</p><p>
 This site presents the letters of Douglas Raymond Baker, who came from Gympie, Queensland, Australia. He
