@@ -158,7 +158,7 @@ main {
     padding-left: 10px;
 }
 
-.hand { /*handwriting font*/
+.hand {
     font-family: "bradley hand itc";
     font-size: larger;
     font-weight: bold;
@@ -238,4 +238,26 @@ footer table th{
 }
 footer table td{
     width: 50%;
+}
+#contact{
+    border: none;
+    width: 900px;
+    margin-left: 25%;
+    margin-right: 25%;
+}
+#contact td{
+    border-bottom: none;
+    vertical-align: text-top;
+}
+#contact th{
+    border-bottom: none;
+    vertical-align: top;
+}
+input{
+    width: 100%;
+    vertical-align: text-top;
+}
+#error{
+    font-size: 9px;
+    color: #FF0000;
 }
