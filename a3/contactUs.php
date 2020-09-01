@@ -10,7 +10,7 @@
     <link id='wireframecss' type="text/css" rel="stylesheet" href="../wireframe.css" disabled>
     <link id='stylecss' type="text/css" rel="stylesheet" href="style.css?t=<?= filemtime("style.css"); ?>">
     <script src='../wireframe.js'></script>
-    <script type='text/javascript' src='/tools.js'></script>
+    <script src='tools.js'></script>
     <?php
         require_once 'tools.php';
     ?>
@@ -53,37 +53,41 @@
                 </tr>
 
                 <tr><td><label for="Name">Name</label></td>
-                    <td><input type="text" name="Name" id="Name" placeholder="Name"></td>
+                    <td><input type="text" name="Name" id="Name" placeholder="Name"
+                    pattern="^[a-zA-Z]+\s[a-zA-Z]+$" required value="localStorage.getItem('Name')"></td>
                     <td ID='error'><?php if(isset($NameErr)) {echo $NameErr;} ?></td>
                 </tr>
 
                 <tr><td><label for="Email">Email</label></td>
-                    <td><input type="text" name="Email" id="Email" placeholder="Email"></td>
+                    <td><input type="text" name="Email" id="Email" placeholder="Email"
+                     required value=localStorage.getItem('Email')></td>
                     <td><?php if(isset($EmailErr)) {echo $EmailErr;} ?></td>
                 </tr>
 
                 <tr><td><label for="Mobile">Mobile</label></td>
-                    <td><input type="text" name="Mobile" id="Mobile" placeholder="Mobile"></td>
+                    <td><input type="text" name="Mobile" id="Mobile" placeholder="Mobile" 
+                    pattern="^(\(04\)|04|\+614)( ?\d){8}$" value="localStorage.getItem('Mobile')"></td>
                     <td></td>
                 </tr>
 
                 <tr><td><label for="Subject">Subject</label></td>
-                    <td><input type="text" name="Subject" id="Subject" placeholder="Subject"></td>
+                    <td><input type="text" name="Subject" id="Subject" placeholder="Subject" required></td>
                     <td></td>
                 </tr>
 
                 <tr><td style="vertical-align: top;"><label for="Message">Message</label></td>
-                    <td><textarea style="height: 150px; width: 100%;" type="text" name="Message" id="Message" placeholder="Message"></textarea>
-                    <!--text area put message at the bottom of the table cell, grr-->
+                    <td><textarea style="height: 150px; width: 100%;" type="text" name="Message" id="Message" placeholder="Message" required></textarea>
+                    <!--text area put message at the bottom of the table cell, grr
+                    also resizing the box breaks the neat table formatting-->
                     <td></td>
                 </tr>
 
-                <tr><td style="text-align: right;"><input type="checkbox" id="remember"></td>
+                <tr><td style="text-align: right;"><input type="checkbox" id="remember" checked="localStorage.getItem('check')" onclick=rememberTogg()></td>
                     <td><label for="remember">Remember Me</label></td>
                     <td></td>
                 </tr>
             </table>
-            <button style="margin-left: 45%; margin-top: 15px;" type="submit" name="submit">Submit</button>
+            <button style="margin-left: 45%; margin-top: 15px;" type="submit" name="submit" onclick=rememberMe()>Submit</button>
         </form>
       </div>
     </main>
@@ -132,6 +136,24 @@
         } else {
           navbar.classList.remove("sticky");
         }
+      }
+
+      function rememberMe(){
+        if (localStorage.getItem('check')){
+            localStorage.setItem('Name', <?php echo $Name?>);
+            localStorage.setItem('Email', <?php echo $Email?>);
+            localStorage.setItem('Mobile', <?php echo $Mobile?>);
+        }
+      }
+
+      function rememberTogg(){
+          var a = localStorage.getItem('check');
+          if (a == true){
+              localStorage.clear();
+              localStorage.setItem('check', false);
+          } else {
+              localStorage.setItem('check', true);
+          }
       }
     </script>
 

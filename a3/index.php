@@ -12,7 +12,7 @@
     <link id='wireframecss' type="text/css" rel="stylesheet" href="../wireframe.css" disabled>
     <link id='stylecss' type="text/css" rel="stylesheet" href="style.css?t=<?= filemtime("style.css"); ?>">
     <script src='../wireframe.js'></script>
-    <script type='text/javascript' src='/tools.js'></script>
+    <script src='/tools.js'></script>
   </head>
 
   <body>

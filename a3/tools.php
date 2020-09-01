@@ -6,8 +6,10 @@ $NameErr=$EmailErr=$MobileErr=$SubjectErr=$MessageErr= NULL;
 $regexMob = "/^(\(04\)|04|\+614)( ?\d){8}$/";// Allows any of the valid mobile prefixes then any 8 numbers to follow
 $regexName = "/^[a-zA-Z]+\s[a-zA-Z]+$/";// is would be nice to allow a hyphen but i can't figure it out
 $regexEmail = "/^[a-zA-z\-\.\d_]+@[a-zA-z\-\.\d_]+\.[a-zA-z\-\.\d_]+$/";// forces emails to be in the form xxx@xxx.xxx
-$regex = "/^[a-zA-Z\s\d\.\,\-_]$/";
+$regex = "/^[a-zA-Z\s\d\&\.\,\-_]$/";
 // Put your PHP functions and modules here
+
+//not 100% sure if this works but it is supposed to get the values from the csv file
   $row = 1;
   if (($handle = fopen("/home/eh1/e54061/public_html/wp/letters-home.txt", "r")) !== FALSE) {
       while (($data = fgetcsv($handle, 0, "\t")) !== FALSE) {
@@ -21,6 +23,7 @@ $regex = "/^[a-zA-Z\s\d\.\,\-_]$/";
       fclose($handle);
   }
 
+//when 
 if (isset($_POST['submit'])) {
   if(preg_match($regexName,$_POST['Name'])){
      $Name = $_POST['Name'];
