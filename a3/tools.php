@@ -2,11 +2,11 @@
   session_start();
 
 $Name=$Email=$Mobile=$Subject=$Message= NULL;
-$NameErr=$EmailErr=$MobileErr=$SubjectErr=$MessageErr= NULL;
+$NameErr=$EmailErr=$MobileErr=$SubjectErr=$MessageErr=$Success= NULL;
 $regexMob = "/^(\(04\)|04|\+614)( ?\d){8}$/";// Allows any of the valid mobile prefixes then any 8 numbers to follow
 $regexName = "/^[a-zA-Z]+\s[a-zA-Z]+$/";// is would be nice to allow a hyphen but i can't figure it out
 $regexEmail = "/^[a-zA-z\-\.\d_]+@[a-zA-z\-\.\d_]+\.[a-zA-z\-\.\d_]+$/";// forces emails to be in the form xxx@xxx.xxx
-$regex = "/^[a-zA-Z\s\d\&\.\,\-_]$/";
+$a=$b=$c=0;
 // Put your PHP functions and modules here
 
 //not 100% sure if this works but it is supposed to get the values from the csv file
@@ -27,23 +27,36 @@ $regex = "/^[a-zA-Z\s\d\&\.\,\-_]$/";
 if (isset($_POST['submit'])) {
   if(preg_match($regexName,$_POST['Name'])){
      $Name = $_POST['Name'];
+     $a = 0;
   } else {
     $NameErr = "Please use your first and last name with no special characters";
+    $a = 1;
   }
-  if(preg_match($regexMob,$_POST['Name'])){
+  if(preg_match($regexEmail,$_POST['Email'])){
     $Email = $_POST['Email'];
+    $b = 0;
  } else {
-   $MobileErr = "Please enter a valid email";
+   $EmailErr = "Please enter a valid email";
+   $b = 1;
  }
-  if(preg_match($regexMob,$_POST['Name'])){
+  if(preg_match($regexMob,$_POST['Mobile'])){
     $Mobile = $_POST['Mobile'];
+    $c = 0;
  } else {
    $MobileErr = "Please enter a valid Australian Mobile No.";
+   $c = 1;
  }
  
-  $Subject = $_POST['Subject'];
-  $Message = $_POST['Message'];
-}
+ if (($a+$b+$c) == 0){
+  $Success = "Email Sent!!";
+ } Else {
+   $Success = NULL;;
+ }
 
+
+ //Performing preg_replace on the data then trimming away excess whitespace to the right
+  $Subject = rtrim(preg_replace('/[^\n[:print:]]/','',$_POST['Subject']));
+  $Message = rtrim(preg_replace('/[^\n[:print:]]/','',$_POST['Message']));
+}
 
 ?>

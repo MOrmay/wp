@@ -48,20 +48,21 @@
         <!--html special chars may make things a bit harder to parse-->
             <table ID='contact'>
                 <tr><th>Contact Us</th>
-                    <td></td>
+                    <th style="color: #00FF00"><?php echo $Success;?></th>
                     <td></td>
                 </tr>
 
                 <tr><td><label for="Name">Name</label></td>
                     <td><input type="text" name="Name" id="Name" placeholder="Name"
                     pattern="^[a-zA-Z]+\s[a-zA-Z]+$" required value="localStorage.getItem('Name')"></td>
+                    <?php//Couldn't get local storage to play nice with the value field or my scripts :(?>
                     <td ID='error'><?php if(isset($NameErr)) {echo $NameErr;} ?></td>
                 </tr>
 
                 <tr><td><label for="Email">Email</label></td>
                     <td><input type="text" name="Email" id="Email" placeholder="Email"
-                     required value=localStorage.getItem('Email')></td>
-                    <td><?php if(isset($EmailErr)) {echo $EmailErr;} ?></td>
+                     required value="localStorage.getItem('Email')"></td>
+                    <td ID='error'><?php if(isset($EmailErr)) {echo $EmailErr;} ?></td>
                 </tr>
 
                 <tr><td><label for="Mobile">Mobile</label></td>
@@ -71,12 +72,14 @@
                 </tr>
 
                 <tr><td><label for="Subject">Subject</label></td>
-                    <td><input type="text" name="Subject" id="Subject" placeholder="Subject" required></td>
+                    <td><input type="text" name="Subject" id="Subject" 
+                    placeholder="Subject" required value = <?php echo $Subject;?>></td>
                     <td></td>
                 </tr>
 
                 <tr><td style="vertical-align: top;"><label for="Message">Message</label></td>
-                    <td><textarea style="height: 150px; width: 100%;" type="text" name="Message" id="Message" placeholder="Message" required></textarea>
+                    <td><textarea style="height: 150px; width: 100%;" type="text" name="Message" id="Message" 
+                    placeholder="Message" required ><?php echo $Message;?></textarea>
                     <!--text area put message at the bottom of the table cell, grr
                     also resizing the box breaks the neat table formatting-->
                     <td></td>
@@ -138,6 +141,7 @@
         }
       }
 
+      //An attempt at recieving the data that was sent to the server to store in local storage
       function rememberMe(){
         if (localStorage.getItem('check')){
             localStorage.setItem('Name', <?php echo $Name?>);
@@ -146,6 +150,7 @@
         }
       }
 
+      //An attempt at clearing local storage when the remember me box was checked
       function rememberTogg(){
           var a = localStorage.getItem('check');
           if (a == true){
