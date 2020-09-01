@@ -10,7 +10,7 @@ $a=$b=$c=0;
 // Put your PHP functions and modules here
 
 //not 100% sure if this works but it is supposed to get the values from the csv file
-  $row = 1;
+/*  $row = 1;
   if (($handle = fopen("/home/eh1/e54061/public_html/wp/letters-home.txt", "r")) !== FALSE) {
       while (($data = fgetcsv($handle, 0, "\t")) !== FALSE) {
           $num = count($data);
@@ -22,8 +22,9 @@ $a=$b=$c=0;
       }
       fclose($handle);
   }
+turns out it does work i just don't have the time to implement it*/
 
-//when 
+//when the submit button is pressed, process the data 
 if (isset($_POST['submit'])) {
   if(preg_match($regexName,$_POST['Name'])){
      $Name = $_POST['Name'];
