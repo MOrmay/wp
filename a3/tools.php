@@ -47,10 +47,21 @@ if (isset($_POST['submit'])) {
    $c = 1;
  }
  
+ //notification if the mail was sent successfully and printing to the mail.txt file
  if (($a+$b+$c) == 0){
   $Success = "Email Sent!!";
+  
+  $mylist = array ($Name, $Email, $Mobile, $Subject, $Message);
+
+  $fp = fopen('mail.txt', 'w');
+
+  foreach ($mylist as $fields){
+    fputcsv($fp, $fields);
+  }
+
+  fclose($fp);
  } Else {
-   $Success = NULL;;
+   $Success = NULL;
  }
 
 

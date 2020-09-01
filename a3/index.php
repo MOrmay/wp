@@ -13,6 +13,9 @@
     <link id='stylecss' type="text/css" rel="stylesheet" href="style.css?t=<?= filemtime("style.css"); ?>">
     <script src='../wireframe.js'></script>
     <script src='/tools.js'></script>
+    <?php
+        require_once 'tools.php';
+    ?>
   </head>
 
   <body>

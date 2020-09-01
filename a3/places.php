@@ -59,14 +59,14 @@
     <footer>
       <table>
         <tr>
-          <th>Contact us:</th>
+          <th><a href="contactUs.php">Contact us!</a></th>
           <td><div>&copy;<script>
             document.write(new Date().getFullYear());
             </script> Mathew Ormay s3795048 Last modified <?= date ("Y F d  H:i", filemtime($_SERVER['SCRIPT_FILENAME'])); ?>.</div>
           </td>
         </tr>
         <tr>
-          <td>Email: ibak6837@bigpond.net.au</td>
+          <td></td>
           <td>Disclaimer: This website is not a real website and is being developed as part of a School of Science Web Programming course at RMIT University in Melbourne, Australia.</td>
         </tr>
         <tr>
